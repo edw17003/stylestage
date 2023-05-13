@@ -1,0 +1,25 @@
+.page-footer {
+  position: relative;
+  padding: 3rem 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+
+  p:first-child {
+    margin-top: 3rem;
+    font-weight: var(--font-weight-strong);
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  p a {
+    color: inherit;
+  }
+
+  ul {
+    grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+  }
+
+  .container > :last-child {
+    margin-bottom: 0;
+  }
+}
