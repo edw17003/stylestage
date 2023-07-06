@@ -19,7 +19,14 @@
     grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
   }
 
-  .container > :last-child {
-    margin-bottom: 0;
+  .container{
+    width: 1300px;
+    margin: auto; 
+    > :last-child {
+      margin-bottom: 0;
+    }
+    li{
+      text-align:center;
+    }
   }
 }

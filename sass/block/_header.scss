@@ -4,7 +4,105 @@ header {
   color: var(--color-primary);
   text-align: center;
 
+  .container{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    h1{
+      margin-top: 10px;
+      font-size: 60px;
+      margin-bottom: 10px;
+      padding-top: 20px;
+      ;
+    }
+    h2{
+      grid-column:1/3;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    h1, h2, p{
+      text-align:left;
+    }
+    p{
+      grid-column: 1/3;
+    }
+    > a{
+      grid-column: 2/3;
+      grid-row:1/2;
+      padding: 20px 10px;
+      margin: 20px 55px;
+      font-size: 54px;
+      position:relative;
+      height: 140px;
+      width: 140px;
+      z-index:3;
+      span{
+        position:absolute;
+        left:0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color-primary;
+        border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+        animation: circle 4s linear infinite;
+        transition: 0.5s;
+      }
+      &:before{
+        content: '';
+        position:absolute;
+        left:0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color-primary;
+        border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+        transition: 0.5s;
+      }
+      &:after{
+        // animation: circle 4s linear infinite;
+        
+      }
+      &:before{
+        animation: circle 6s linear infinite;
+      }
+      &:hover span{
+        background-color: $color-primary-alt;
+        border: none;
+        // z-index:1;
+        
+      }
+      &:hover{
+        &:after{
+          position:absolute;
+          content:"Start on Github";
+          z-index: 3;
+          left: 0px;
+          color: #fff;
+          // top: 60px;
+        }
+        &:before{
+          background-color: $color-primary-alt;
+          border: none;
+        }
+      }
+      
+      
+      span:nth-child(1) {
+        
+      }
+    }
+    .link-github{
+      font-size: 28px;
+    }
+  }
   h2 {
     max-width: 15em;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
