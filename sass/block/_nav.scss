@@ -4,14 +4,24 @@ nav {
     justify-content: center;
     list-style: none;
     background-color: var(--color-secondary);
-    padding-left: 0;
+    padding: 10px 0;
     a {
       display: inline-grid;
       padding: 0.5rem;
-      color: black;
+      color: var(--color-dark);
       text-decoration: none;
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  nav {
+    ul {
+      a {
+        // padding: .25rem;
       }
     }
   }
