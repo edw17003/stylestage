@@ -1,12 +1,7 @@
 @import "globals/fonts";
 
-// You can modify the theme directly, or override some of the variables
-// Overrides just need placed prior to the theme import
-// For example:
-// $color-primary: #3a0;
 @import "globals/theme";
 @import "utility/reset";
-@import "utility/logomark";
 @import "globals/typography";
 @import "composition/layout";
 @import "block/header";

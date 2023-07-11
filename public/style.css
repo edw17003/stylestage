@@ -1,13 +1,13 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
-  --color-primary: #251f47;
-  --color-primary-alt: #404e7c;
-  --color-secondary: #1a4249;
-  --color-background: #86cb92;
-  --color-text: #1f1d2b;
+  --color-primary: #77d8ff;
+  --color-primary-alt: #b685a2;
+  --color-secondary: #30C5FF;
+  --color-background: #2a2d34;
+  --color-text: #63c6ee;
   --color-light: #fff;
-  --color-anchor: #251f47;
+  --color-dark: #000;
+  --color-anchor: #77d8ff;
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -225,7 +225,7 @@ header .container > a span {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #251f47;
+  border: 1px solid #77d8ff;
   border-radius: 40% 60% 65% 35%/40% 45% 55% 60%;
   animation: circle 4s linear infinite;
   transition: 0.5s;
@@ -236,7 +236,7 @@ header .container > a:before {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #251f47;
+  border: 1px solid #77d8ff;
   border-radius: 40% 60% 65% 35%/40% 45% 55% 60%;
   transition: 0.5s;
 }
@@ -244,18 +244,18 @@ header .container > a:before {
   animation: circle 6s linear infinite;
 }
 header .container > a:hover span {
-  background-color: #404e7c;
+  background-color: #b685a2;
   border: none;
 }
 header .container > a:hover:after {
   position: absolute;
-  content: "Start on Github";
+  content: "Star on Github";
   z-index: 3;
   left: 0px;
   color: #fff;
 }
 header .container > a:hover:before {
-  background-color: #404e7c;
+  background-color: #b685a2;
   border: none;
 }
 header .container .link-github {
@@ -263,6 +263,18 @@ header .container .link-github {
 }
 header h2 {
   max-width: 15em;
+}
+header::before, header::after {
+  content: "";
+  width: 100%;
+  height: 400px;
+  background: url("https://source.unsplash.com/7PqRZK6rbaE");
+  position: relative;
+  opacity: 90%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @keyframes circle {
@@ -273,6 +285,12 @@ header h2 {
     transform: rotate(360deg);
   }
 }
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url('data:image/svg+xml,<svg viewBox="-72 10 362 200" version="1.1"><circle id="cSun" cy="45" cx="131" r="31"></circle></svg>');
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -283,8 +301,11 @@ nav ul {
 nav ul a {
   display: inline-grid;
   padding: 0.5rem;
-  color: white;
+  color: black;
   text-decoration: none;
+}
+nav ul a:hover {
+  text-decoration: underline;
 }
 
 #about {
@@ -316,26 +337,8 @@ nav ul a {
 #about section:nth-child(2) ul li {
   margin: 0.25em;
   padding: 0.25em 0.5em;
-  background-color: var(--color-light);
-}
-#about section:nth-child(2)::before {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  transform: translate(-50%, -50%);
-  transition: 300ms transform ease-in;
-  background-image: radial-gradient(rgba(255, 0, 0, 0) 20%, #b3f8f1 20%, #b3f8f1 25%, rgba(255, 0, 0, 0) 25%, rgba(255, 0, 0, 0) 30%, #b3f8f1 30%, #b3f8f1 40%, rgba(255, 0, 0, 0) 40%, rgba(255, 0, 0, 0) 45%, #b3f8f1 45%, #b3f8f1 50%, rgba(255, 0, 0, 0) 50%);
-  opacity: 0.8;
-  content: "";
-  z-index: -1;
-}
-@media (max-width: 35rem) {
-  #about section:nth-child(2)::before {
-    transform: scale(2) translate(-25%, -25%);
-  }
+  background-color: var(--color-primary-alt);
+  color: var(--color-dark);
 }
 
 #guidelines {
@@ -349,8 +352,7 @@ nav ul a {
 }
 #guidelines h3 {
   display: inline-block;
-  transform: rotate(-8deg) translateX(-10%);
-  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  background: var(--color-primary);
 }
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines h3 {
@@ -379,7 +381,6 @@ nav ul a {
     color: var(--color-primary-alt);
     font-size: 0.9em;
     font-weight: normal;
-    content: "← Whoa, text gradients!";
   }
 }
 #guidelines .container > a {
@@ -394,55 +395,7 @@ nav ul a {
 #contribute .container ol li {
   margin-right: 30px;
 }
-#about section:nth-child(2) {
-  position: relative;
-  grid-column: 2/3;
-}
 
-#about section:nth-child(2) p:nth-of-type(2) {
-  align-self: center;
-  margin-top: 2rem;
-  color: var(--color-secondary);
-  font-size: 1.5em;
-  font-weight: var(--font-weight-strong);
-  text-align: center;
-}
-
-#about section:nth-child(2) ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 1rem 0 2rem;
-  padding: 0;
-  list-style: none;
-}
-
-#about section:nth-child(2) ul li {
-  margin: 0.25em;
-  padding: 0.25em 0.5em;
-  background-color: var(--color-light);
-}
-
-#about section:nth-child(2)::before {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  transform: translate(-50%, -50%);
-  transition: 300ms transform ease-in;
-  background-image: radial-gradient(rgba(255, 0, 0, 0) 20%, #b3f8f1 20%, #b3f8f1 25%, rgba(255, 0, 0, 0) 25%, rgba(255, 0, 0, 0) 30%, #b3f8f1 30%, #b3f8f1 40%, rgba(255, 0, 0, 0) 40%, rgba(255, 0, 0, 0) 45%, #b3f8f1 45%, #b3f8f1 50%, rgba(255, 0, 0, 0) 50%);
-  opacity: 0.8;
-  content: "";
-  z-index: -1;
-}
-
-@media (max-width: 35rem) {
-  #about section:nth-child(2)::before {
-    transform: scale(2) translate(-25%, -25%);
-  }
-}
 #files {
   display: grid;
   place-content: center;
@@ -456,7 +409,7 @@ nav ul a {
 #files .container {
   display: inline-block;
   padding: 5vmin;
-  outline: 4px dashed var(--color-secondary);
+  outline: 4px dashed var(--color-primary-alt);
   background-color: var(--color-background);
   text-align: center;
 }
@@ -497,8 +450,8 @@ nav ul a {
 .page-footer {
   position: relative;
   padding: 3rem 1rem;
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: var(--color-primary-alt);
+  color: var(--color-background);
 }
 .page-footer p:first-child {
   margin-top: 3rem;
@@ -508,6 +461,7 @@ nav ul a {
 }
 .page-footer p a {
   color: inherit;
+  font-weight: bold;
 }
 .page-footer ul {
   grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
@@ -541,4 +495,4 @@ nav ul a {
 
 .link-github svg {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
