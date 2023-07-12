@@ -1,10 +1,18 @@
 #contribute{
   .container ol{
-    border-top: 1px solid ghostwhite;
+    border-top: 1px solid var(--color-primary-alt);
     padding-top: 20px;
     display: flex;
     li{
       margin-right: 30px;
+    }
+  }
+  @media screen and (max-width: 675px) {
+    .container ol {
+      display: block;
+      li {
+        margin-top: 1em;
+      }
     }
   }
 }

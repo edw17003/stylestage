@@ -399,12 +399,20 @@ nav ul a:hover {
 }
 
 #contribute .container ol {
-  border-top: 1px solid ghostwhite;
+  border-top: 1px solid var(--color-primary-alt);
   padding-top: 20px;
   display: flex;
 }
 #contribute .container ol li {
   margin-right: 30px;
+}
+@media screen and (max-width: 675px) {
+  #contribute .container ol {
+    display: block;
+  }
+  #contribute .container ol li {
+    margin-top: 1em;
+  }
 }
 
 #files {
@@ -437,6 +445,27 @@ nav ul a:hover {
 }
 #files .container a:not(:last-child):not(.link-codepen) {
   font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+#styles {
+  text-align: center;
+}
+#styles .container {
+  width: 60%;
+}
+#styles .container .features h2 {
+  color: var(--color-primary);
+}
+#styles .container .features li {
+  padding: 1rem;
+  color: var(--color-light);
+  text-align: center;
+}
+#styles .container .features li > span a {
+  color: inherit;
+}
+#styles .container .link-allstyles:hover {
+  text-decoration: underline;
 }
 
 .profile {
@@ -505,7 +534,7 @@ nav ul a:hover {
   grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
 }
 .page-footer .container {
-  width: 100%;
+  width: 70%;
   margin: auto;
 }
 .page-footer .container > :last-child {
@@ -513,6 +542,11 @@ nav ul a:hover {
 }
 .page-footer .container li {
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .page-footer .container {
+    width: 100%;
+  }
 }
 
 .skip-link {
@@ -532,4 +566,4 @@ nav ul a:hover {
 
 .link-github svg {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}

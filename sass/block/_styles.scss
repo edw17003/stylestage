@@ -1,17 +1,22 @@
-.features {  
-  li {
-    padding: 1rem;
-    color: var(--color-light);
-    text-align: center;
-    > span a {
-        color: inherit;
-    }
-  }
-}
-
 #styles {
   text-align: center;
-  h2 {
-    color: var(--color-primary);
+  .container {
+    width: 60%;
+    .features {
+      h2 {
+        color: var(--color-primary);
+      }
+      li {
+        padding: 1rem;
+        color: var(--color-light);
+        text-align: center;
+        > span a {
+            color: inherit;
+        }
+      }
+    }
+    .link-allstyles:hover {
+      text-decoration: underline;
+    }
   }
 }
