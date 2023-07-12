@@ -489,7 +489,6 @@ nav ul a:hover {
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
-<<<<<<< HEAD
 #styles {
   text-align: center;
 }
@@ -500,24 +499,15 @@ nav ul a:hover {
   color: var(--color-primary);
 }
 #styles .container .features li {
-=======
-.features li {
->>>>>>> ab6670923279ae70baf83d6536b85917cd7f5b97
   padding: 1rem;
   color: var(--color-light);
   text-align: center;
 }
-<<<<<<< HEAD
 #styles .container .features li > span a {
   color: inherit;
 }
 #styles .container .link-allstyles:hover {
   text-decoration: underline;
-}
-
-=======
-.features li > span a {
-  color: inherit;
 }
 
 #styles {
@@ -538,7 +528,6 @@ nav ul a:hover {
     width: 100vw;
   }
 }
->>>>>>> ab6670923279ae70baf83d6536b85917cd7f5b97
 .profile {
   color: var(--color-primary);
   position: fixed;
@@ -610,11 +599,7 @@ nav ul a:hover {
   grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
 }
 .page-footer .container {
-<<<<<<< HEAD
-  width: 70%;
-=======
   width: 1300px;
->>>>>>> ab6670923279ae70baf83d6536b85917cd7f5b97
   margin: auto;
 }
 .page-footer .container > :last-child {
@@ -622,11 +607,6 @@ nav ul a:hover {
 }
 .page-footer .container li {
   text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .page-footer .container {
-    width: 100%;
-  }
 }
 
 @media (max-width: 1270px) {
