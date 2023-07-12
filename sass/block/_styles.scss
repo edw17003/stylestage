@@ -14,4 +14,19 @@
   h2 {
     color: var(--color-primary);
   }
+  .container{
+    width: 1300px;
+    li{
+      text-align:center;
+    }
+  }
+}
+@media (max-width: 1270px) {
+  #styles{
+    .container {
+      width: 100vw;
+    }
+  }
+  
+  
 }

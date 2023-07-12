@@ -1,10 +1,28 @@
+$icon-box-size: 100px;
+$icon-color: #74b9ff;
+
 nav {
+  position:relative;
+  &::before, &::after{
+    content:'';
+    background-color: $color-background;
+    right: 46%;
+    height:4px;
+    position:absolute;
+    width: 7%;
+    transition: 0.3s;
+    z-index:3;
+    display:none;
+  }
+  
   ul {
     display: flex;
     justify-content: center;
     list-style: none;
     background-color: var(--color-secondary);
     padding: 10px 0;
+    
+    
     a {
       display: inline-grid;
       padding: 0.5rem;
@@ -12,6 +30,7 @@ nav {
       text-decoration: none;
       &:hover {
         text-decoration: underline;
+        // color: $icon-color;
       }
     }
   }
@@ -19,10 +38,46 @@ nav {
 
 @media (max-width: 550px) {
   nav {
+    // height: 60px;
+    // overflow:hidden;
+    
     ul {
+      // display:none;
+      // position:absolute;
+      padding-top:30px;
+      top:50px;
+      width: 100%;
+      flex-direction: column;
+      text-align:center;
+      height:40px;
+      overflow:none;
+      &:hover{
+        // background-color: white;
+        height:300px;
+        li{
+          display:block;
+        }
+      }
+      li{
+        display:none;
+      }
+      // display:none;
       a {
         // padding: .25rem;
       }
+    }
+    &::before, &::after{
+      display:block;
+      cursor:pointer;
+      // &:hover + ul{
+      //   background-color:white;
+      // }
+    }
+    &::before{
+      top: 10px;
+    }
+    &::after{
+      top: 20px;
     }
   }
 }
