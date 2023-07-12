@@ -20,3 +20,28 @@
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+#styles {
+  text-align: center;
+  h2 {
+    color: var(--color-primary);
+  }
+  .container{
+    width: 1300px;
+    li{
+      text-align:center;
+    }
+  }
+}
+@media (max-width: 1270px) {
+  #styles{
+    .container {
+      width: 100vw;
+    }
+  }
+  
+  
+}
+>>>>>>> ab6670923279ae70baf83d6536b85917cd7f5b97
