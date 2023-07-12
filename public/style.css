@@ -321,7 +321,7 @@ nav ul a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   nav ul {
     padding-top: 30px;
     top: 50px;
@@ -589,6 +589,11 @@ nav ul a:hover {
   text-align: center;
 }
 
+@media (max-width: 1270px) {
+  .page-footer .container {
+    width: 100%;
+  }
+}
 .skip-link {
   display: none;
 }
