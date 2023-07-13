@@ -7,11 +7,13 @@
       margin-right: 30px;
     }
   }
+  
   @media screen and (max-width: 675px) {
     .container ol {
       display: block;
       li {
         margin-top: 1em;
+        // display: block;
       }
     }
   }
